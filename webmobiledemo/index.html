@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="wap-font-scale" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="广州诗悦网络科技有限公司,lailina@shiyuegame.com">
+    <title>关于诗悦-诗悦网络-精品游戏探索者</title>
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <meta name="keywords" content="游戏平台,免费游戏平台,手机游戏平台,手机游戏,手游礼包领取,手机游戏下载,诗悦,诗悦游戏,诗悦游戏官网,诗悦手游平台">
+    <meta name="description"
+        content="诗悦网络是一家专注精品手游研发和发行的游戏公司，以高端自主研发技术为依托，关注玩家需求，并以精美的游戏画面，为玩家呈现一场超越市面游戏效果的视觉盛宴。仙凡幻想、闪烁之光、风色世界、圣剑纪元等是我们为玩家提供的最新精品手游">
+    <meta name="format-detection" content="telephone=no, email=no">
+
+    <meta name="sogou_site_verification" content="2wWQbCc1Y5">
+    <meta name="360-site-verification" content="9180d32f301369f964c255d88468f137">
+
+    <script src="https://hm.baidu.com/hm.js?fdd099df1b914e1e5cfcd8f7d8202721"></script>
+    <script>
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            var path = window.location.pathname.split('/');
+            var id = path.pop();
+            var type = path.pop();
+
+            if (typeof type != 'undefined' && type != 'm') {
+
+                //                 var websiteMobileUrl = location.href + "m" + id;
+                var href = location.origin;
+                var websiteMobileUrl = href + "/m/" + id;
+                var http = new XMLHttpRequest();
+                http.open('HEAD', websiteMobileUrl, false);
+                http.send();
+                if (http.status != 404) {
+                    window.location.href = websiteMobileUrl;
+                }
+            }
+        }
+    </script>
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/reset.min.css?v=1667375890">
+    <link rel="stylesheet" href="assets/css/common.css?v=1667375890">
+    <link rel="stylesheet" href="assets/css/swiper-4.5.0.min.css?v=1667375890">
+    <link rel="stylesheet" href="assets/css/animate.min.css?v=1667375890">
+    <link rel="stylesheet" href="assets/css/about.css?v=1667375890">
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="sy-header">
+        <div class="header w12 clearfix">
+            <a href="https://www.shiyue.com" class="logo">
+                <h1>
+                    <img src="assets/images/logo.png" alt="诗悦网络">
+                </h1>
+            </a>
+
+            <ul class="nav" id="J_nav">
+                <li>
+                    <a href="https://www.shiyue.com">首页</a>
+                </li>
+                <li>
+                    <a href="games.html">游戏产品</a>
+                </li>
+                <li>
+                    <a href="gifts.html">礼包</a>
+                </li>
+                <li class="cur">
+                    <a href="about.html">关于诗悦</a>
+                </li>
+                <li>
+                    <a href="join.html">加入诗悦</a>
+                </li>
+                <li>
+                    <a href="https://pc-bbs.shiyue.com/" target="_blank">官方社区</a>
+                </li>
+                <div class="nav-line" style="left: 360px;"></div>
+            </ul>
+
+
+
+
+
+            <div class="drop" id="J_drop_menu">
+                <div class="avatar">
+                    <div class="icon">
+                        <img src="assets/images/avatar.png" alt="">
+                    </div>
+                    <span class="name">请登录</span>
+                    <i></i>
+                </div>
+                <ul class="drop-menu">
+                    <li class="drop-menu1">
+                        <a href="javascript:;" class="btn-login J_btn_login"><i></i> <span>登录</span></a>
+                        <a href="personal.html" class="btn-personal J_btn_personal" style="display: none;"><i></i>
+                            <span>个人中心</span></a>
+                    </li>
+                    <li class="drop-menu2">
+                        <a href="pay.html"><i></i> <span>充值</span></a>
+                    </li>
+                    <li class="drop-menu3">
+                        <a href="service.html"><i></i> <span>客服中心</span></a>
+                    </li>
+                    <li class="drop-menu4">
+                        <a href="javascript:;" class="btn-logout J_btn_logout" style="display: none;"><i></i>
+                            <span>退出登录</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录注册弹窗 -->
+    <div class="pop pop-panel hide" id="J_pop_panel">
+        <div class="mask"></div>
+
+        <!-- 登录 -->
+        <div class="pop-login">
+            <div class="pop-close"></div>
+
+            <ul class="login-menu">
+                <li data-login_type="1" class="cur">账号登录</li>
+                <li data-login_type="2">短信登录</li>
+            </ul>
+
+            <!-- 账号密码登录 -->
+            <div class="pop-group-box">
+                <div class="pop-group">
+                    <div class="group-item clearfix">
+                        <img class="group-reminder-icon" src="assets/images/acc-icon.png" alt="提示">
+                        <input class="g-input" name="username" type="text" placeholder="请输入手机号码/账号"
+                            onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')">
+                        <i class="clear-input"></i>
+                    </div>
+                </div>
+                <div class="pop-group captcha">
+                    <div class="group-item clearfix">
+                        <img class="group-reminder-icon" src="assets/images/captcha-icon.png" alt="提示">
+                        <input name="captcha" class="g-input" type="text" placeholder="请输入验证码"
+                            onkeyup="value=value.replace(/[^0-9a-zA-Z]/ig,'')">
+                        <div class="get-captcha">
+                            <img class="pic-captcha" src="" alt="验证码">
+                            <span class="refresh-captcha"></span>
+                        </div>
+                        <i class="clear-input"></i>
+                    </div>
+                </div>
+                <div class="pop-group">
+                    <div class="group-item clearfix">
+                        <img class="group-reminder-icon" src="assets/images/pwd-icon.png" alt="提示">
+                        <input name="pwd" class="g-input" type="password" placeholder="请输入密码"
+                            onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')">
+                        <i class="clear-input"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 手机短信登录 -->
+            <div class="pop-group-box hide">
+                <div class="pop-group">
+                    <div class="group-item clearfix">
+                        <img class="group-reminder-icon" src="assets/images/phone-icon.png" alt="提示">
+                        <input class="g-input" name="phone" type="text" placeholder="请输入手机号码"
+                            onkeyup="value=value.replace(/[^0-9]/ig,'')">
+                        <i class="clear-input"></i>
+                    </div>
+                </div>
+                <div class="pop-group sms">
+                    <div class="group-item clearfix">
+                        <img class="group-reminder-icon" src="assets/images/pwd-icon.png" alt="提示">
+                        <input name="code" class="g-input" type="password" placeholder="手机验证码"
+                            onkeyup="value=value.replace(/[^0-9]/ig,'')">
+                        <button class="get-sms">获取验证码</button>
+                        <i class="clear-input"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pop-about clearfix">
+                <input name="remember" type="checkbox" value="记住用户名" checked="checked">
+                <span>记住用户名</span>
+                <a href="forget.html" class="forgot">忘记密码？</a>
+            </div>
+            <div class="pop-group login">
+                <button class="pop-btn pop-btn-login">立即登录</button>
+            </div>
+            <div class="pop-bottom">
+                <span>还没有账号？</span>
+                <a class="pop-reg-btn" href="javascript:;">立即注册</a>
+            </div>
+            <div class="pop-protocol">
+                请您认真阅读并充分理解<a href="article_detail_10_34.html" target="_blank">《诗悦游戏用户服务协议》</a>、
+                <a href="article_detail_10_37.html" target="_blank">《诗悦游戏隐私政策》</a>和<a href="article_detail_10_675.html"
+                    target="_blank">《诗悦游戏儿童隐私保护政策》</a>内容，如您不同意该内容，请勿注册或使用诗悦游戏服务。
+            </div>
+        </div>
+
+        <!-- 注册 -->
+        <div class="pop-register">
+            <div class="pop-close"></div>
+            <div class="title">
+                注册诗悦平台账号
+            </div>
+            <div class="pop-group">
+                <div class="group-item clearfix">
+                    <div class="g-label">手机号码：</div>
+                    <input class="g-input" name="phone" type="text" placeholder="请输入手机号"
+                        onkeyup="value=value.replace(/[^0-9]/ig,'')">
+                    <i class="clear-input"></i>
+                </div>
+            </div>
+            <div class="pop-group sms">
+                <div class="group-item clearfix">
+                    <div class="g-label">验证码：</div>
+                    <input class="g-input" name="code" type="text" placeholder="手机验证码"
+                        onkeyup="value=value.replace(/[^0-9]/ig,'')">
+                    <i class="clear-input"></i>
+                    <button class="get-sms">获取验证码</button>
+                </div>
+            </div>
+            <div class="pop-group">
+                <div class="group-item clearfix">
+                    <div class="g-label">密码：</div>
+                    <input class="g-input" name="pwd" type="password" placeholder="密码由6~20字母或数字组成"
+                        onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')">
+                    <i class="clear-input"></i>
+                </div>
+            </div>
+
+            <div class="pop-group">
+                <div class="group-item clearfix">
+                    <div class="g-label">确认密码：</div>
+                    <input class="g-input" name="cpwd" type="password" placeholder="请确认密码"
+                        onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')">
+                    <i class="clear-input"></i>
+                </div>
+            </div>
+            <div class="pop-group">
+                <div class="group-item clearfix">
+                    <div class="g-label">姓名：</div>
+                    <input class="g-input" name="card_name" type="text" placeholder="请输入真实姓名">
+                    <i class="clear-input"></i>
+                </div>
+            </div>
+            <div class="pop-group">
+                <div class="group-item clearfix">
+                    <div class="g-label">身份证：</div>
+                    <input class="g-input" name="card_id" type="text" placeholder="请输入有效的18位身份证号码"
+                        onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')">
+                    <i class="clear-input"></i>
+                </div>
+            </div>
+            <div class="pop-agreement clearfix">
+                <input name="agreement" type="checkbox" value="" checked="checked">
+                阅读并同意<a href="article_detail_10_34.html" target="_blank">诗悦网络用户协议</a>和<a
+                    href="article_detail_10_37.html" target="_blank">诗悦隐私协议</a>
+            </div>
+            <div class="pop-group register">
+                <button class="pop-btn pop-btn-register">立即注册</button>
+            </div>
+            <div class="pop-bottom">
+                <span>已有账号？</span>
+                <a class="pop-log-btn" href="javascript:;">立即登录</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 实名认证 -->
+    <div class="pop pop-verified hide" id="J_pop_verified">
+        <div class="mask"></div>
+        <div class="content">
+            <div class="head">
+                <span>实名认证</span>
+                <a href="javascript:;" class="pop-close"></a>
+            </div>
+            <div class="body">
+                <div class="tips">
+                    <p>
+                        亲爱的用户 <br>
+                        根据国家相关法规要求，请尽快完善实名制信息
+                    </p>
+                </div>
+                <div class="verified-item clearfix">
+                    <div class="verified-l">真实姓名：</div>
+                    <div class="verified-r">
+                        <input class="ipt-inner" name="card_name" type="text" placeholder="请输入真实姓名">
+                        <i class="clear-input"></i>
+                    </div>
+                </div>
+
+                <div class="verified-item clearfix">
+                    <div class="verified-l">身份证号：</div>
+                    <div class="verified-r">
+                        <input class="ipt-inner" name="card_id" type="text" placeholder="请输入证件号码"
+                            onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')">
+                        <i class="clear-input"></i>
+                    </div>
+                </div>
+                <a href="javascript:;" class="btn-verified">提 交</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- banner -->
+        <div class="banner">
+            <div class="inner">
+                <img src="assets/images/about-banner.jpg" alt="关于诗悦">
+            </div>
+        </div>
+
+
+        <!-- wrap -->
+        <div class="sy-wrap">
+            <div class="about-wrap">
+                <div class="about w12 wow fadeInUp" data-wow-duration="1s"
+                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                    <h3 class="title">公司简介</h3>
+                    <div class="inner">
+                        <p><span helvetica="" pingfang="" hiragino="" sans="" heiti="" microsoft="" wenquanyi=""
+                                micro="" white-space:="" background-color:=""
+                                style="white-space: normal; color: rgb(115, 115, 115);"></span></p>
+                        <p style="margin-top: 0;margin-right: 0;margin-bottom: 0;padding: 0;line-height: 42px"><span
+                                style="font-size: 16px;"><span
+                                    style="font-family: 微软雅黑; letter-spacing: 0px; background: rgb(255, 255, 255);"><span
+                                        style="font-family: 微软雅黑;"></span></span></span></p>
+                        <p>【公司简介】<br></p>
+                        <p>诗悦网络，成立于2014年，是专注于精品手游研发和全球化发行的研运一体公司。我们以“精品游戏探索者”为研发理念，以“给玩家以快乐，给团队以成长”为核心价值观，以“我们致力成为世界一流的新文创企业，起于游戏，不止于游戏”为公司愿景。
+                        </p>
+                        <p>公司荣获“2021年广州文化企业30强”、2021金钻榜“最具影响力企业”、“最具成长性企业”等多项奖项。</p>
+                        <p><br>【研发能力】<br>近千人的精品游戏探索团队，具备极强的新品类探索及产品孵化能力；</p>
+                        <p>单款产品年累计流水超30亿，3年5款产品月流水过亿，累计总流水超百亿；</p>
+                        <p>拓展全球业务，境外单款产品月流水过亿；</p>
+                        <p>《斗罗大陆：武魂觉醒》进入App store游戏畅销榜第5名；</p>
+                        <p>《云上城之歌》荣获app store中国港台地区畅销榜no.1，全球累计流水超35亿；</p>
+                        <p>《星辰奇缘》品牌化长线运营周期近6年，月流水仍保持数千万水平；</p>
+                        <p>荣获“2021年度游戏十强优秀研发团队”、“最佳游戏制作团队” 等荣誉。</p>
+                        <p><br><br>【发行能力】<br></p>
+                        <p>单款产品年度发行累计流水超10亿；累计总流水超过20亿；</p>
+                        <p>《闪烁之光》发行月流水破亿，跻身国内一流游戏发行商；</p>
+                        <p>荣获Tencent IN 游戏营销向阳奖“2020年最具竞争实力广告主”、“2021年最具匠心精神广告主”等奖项。</p>
+                        <p><br>【产品范围】<br>涵盖二次元、回合制、ARPG、放置卡牌、休闲竞技、ACT等多类型产品，其中回合制、放置卡牌、ARPG类产品已成为行业标杆。</p>
+                        <p><br></p>
+                        <p>【上线产品】<br>《云上城之歌》、《斗罗大陆：武魂觉醒》、《闪烁之光》、《轩辕剑：剑之源》、《仙凡幻想》、《星辰奇缘》、《仙灵觉醒》等上线产品，更多精品游戏即将上线。</p>
+                        <p><br></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="culture-wrap">
+                <div class="culture w12 wow fadeInUp" data-wow-duration="1s"
+                    style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                    <h3 class="title">企业文化</h3>
+                    <ul class="list">
+                        <li>
+                            <img src="assets/images/culture01.png" alt="">
+                            <h3>企业价值观</h3>
+                            <p>给玩家以快乐，给团队以成长</p>
+                            <p>结果导向</p>
+                            <p>简单务实</p>
+                            <p>自我批判</p>
+                            <p>终身学习</p>
+                        </li>
+                        <li>
+                            <img src="assets/images/culture02.png" alt="">
+                            <h3>经营理念</h3>
+                            <p>给用户带来快乐</p>
+                            <p>与合作伙伴共创价值 <br>和员工分享成长</p>
+                        </li>
+                        <li>
+                            <img src="assets/images/culture03.png" alt="">
+                            <h3>产品理念</h3>
+                            <h4>精品游戏探索者</h4>
+                            <p>
+                                拒绝重复，拒绝平庸<br>
+                                做让团队骄傲的产品 <br>
+                                追求极致用户体验<br>
+                                勇于探索新领域 <br>
+                                多元化，品牌化，全球化
+                            </p>
+                        </li>
+                        <li>
+                            <img src="assets/images/culture04.png" alt="">
+                            <h3>企业使命</h3>
+                            <p>让世界更快乐</p>
+                            <p>使自己更美好</p>
+                        </li>
+                        <li>
+                            <img src="assets/images/culture05.png" alt="">
+                            <h3>企业愿景</h3>
+                            <p>我们致力成为世界一流的新文创企业</p>
+                            <p>起于游戏，不止于游戏</p>
+                        </li>
+                    </ul>
+                    <div class="inner">
+                        我们热爱游戏并专注于探索精品游戏，倡导自由、平等的工作环境，尊重、鼓励并激发员工的自主性和创造力，致力于为员工营造平等和谐、团结合作且富有激情的工作氛围，帮助员工最大程度地实现自我价值，以达到个人发展和公司发展双赢的目的。未来，诗悦网络将继续秉持“精品游戏探索者”的理念，实施多元化，品牌化，全球化的战略，努力提高产品的类型及质量，用心打造高品质，为玩家创造更多快乐。
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-wrap">
+                <div class="history wow fadeInUp" data-wow-duration="1s"
+                    style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                    <h3 class="title">诗悦大事件</h3>
+
+                    <div
+                        class="swiper-container history-swiper swiper-container-initialized swiper-container-horizontal swiper-container-free-mode">
+                        <div class="history-control">
+                            <a href="javascript:;" class="forward swiper-button-disabled" tabindex="0" role="button"
+                                aria-label="Previous slide" aria-disabled="true"><i></i></a>
+                            <a href="javascript:;" class="backward" tabindex="0" role="button" aria-label="Next slide"
+                                aria-disabled="false"><i></i></a>
+                        </div>
+                        <div class="swiper-wrapper"
+                            style="transition-duration: 0ms; transform: translate3d(536px, 0px, 0px);">
+                            <div class="swiper-slide swiper-slide-active" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2014年12月</span>
+                                <p><span>广州诗悦网络科技有限公司成立</span></p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2016年1月</span>
+                                <p><span>首款新型2D回合制手游大作《仙灵奇缘》诞生，上线第二个月就获得千万流水的佳绩</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2016年3月</span>
+                                <p><span>首款3D魔幻风格回合制手游《星辰奇缘》上线，次月即荣登appstore畅销排行榜前30</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2016年12月</span>
+                                <p><span>三款产品创下连续单月总流水破亿的新纪录</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2017年8月</span>
+                                <p><span>成立游戏发行部，开启研运一体化发展新模式</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2017年10月</span>
+                                <p><span>自主研发且独立发行产品——《仙凡幻想》开启删档测试</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2018年3月</span>
+                                <p><span>《仙灵觉醒》创单款产品单月流水破亿的佳绩</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2019年7月</span>
+                                <p><span>《闪烁之光》单款产品发行月流水突破数亿</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2020年4月</span>
+                                <p><span>《轩辕剑：剑之源》全平台上线</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2020年6月</span>
+                                <p><span>《云上城之歌》全平台首发</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2020年8月</span>
+                                <p><span>《云上城之歌》月流水突破数亿</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2021年3月</span>
+                                <p><span>《斗罗大陆：武魂觉醒》全渠道首发公测，上线首日流水突破千万，首月流水突破3亿</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2021年7月</span>
+                                <p><span>《云上城之歌》单品境外月流水过亿，港澳台地区ios畅销榜第一</span></p>
+                            </div>
+                            <div class="swiper-slide" style="width: 248px; margin-right: 20px;">
+                                <span class="time">2021年8月</span>
+                                <p><span>《闪烁之光》单品发行累计流水超20亿</span></p>
+                            </div>
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-wrap" id="contact">
+                <div class="contact w12 wow fadeInUp" data-wow-duration="1s"
+                    style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                    <h3 class="title">联系方式</h3>
+                    <div class="inner clearfix">
+                        <div class="contact-map">
+                            <iframe src="./map.html" frameborder="0" allowtransparency="true" scrolling="no"
+                                width="100%" height="524" style="background: transparent;">
+                                您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。
+                            </iframe>
+                        </div>
+                        <div class="contact-info">
+                            <p style=" font-size:18px; line-height:32px;"><strong>广州诗悦网络科技有限公司</strong></p>
+                            <p><span style="font-size: 14px;">联系电话：020-38559044</span></p>
+                            <p><span style="font-size: 14px;">客服热线：020-89289709&nbsp; &nbsp;</span><span
+                                    style="font-size: 14px;">客服QQ：800185843</span></p>
+                            <p><span style="font-size: 14px;">公司地址：广州市天河区科韵路36-38号 2-5楼&nbsp;</span></p>
+                            <p><span style="font-size: 14px;">邮政编码：510665</span></p>
+                            <p style=" font-size:18px; line-height:32px;"><strong>商务合作</strong></p>
+                            <p><span style="font-size: 14px;">①产品合作（独代&amp;联运&amp;IP等）</span></p>
+                            <p><span style="font-size: 14px;">邮箱：hezuo@shiyue.com</span></p>
+                            <p><span style="font-size: 14px;">②发行、市场合作</span></p>
+                            <p><span style="font-size: 14px;">邮箱：shangwu@shiyue.com</span></p>
+                            <p><span style="font-size: 14px;">③外包合作（美术&amp;音乐等）</span></p>
+                            <p><span style="font-size: 14px;">外包QQ：2102796332</span></p>
+                            <p><span style="font-size: 14px;">联系人：陈小姐</span></p>
+                            <p style=" font-size:18px;  line-height:32px;"><strong>加入诗悦</strong></p>
+                            <p><span style="font-size: 14px;">2023校招咨询Q群：620972001</span></p>
+                            <p><span style="font-family: arial, helvetica, sans-serif; font-size: 14px;">社会招聘QQ：2291836030&nbsp;
+                                    &nbsp;&nbsp;</span><span
+                                    style="font-family: arial, helvetica, sans-serif; font-size: 14px;">邮箱：hr@shiyue.com</span>
+                            </p>
+                            <p><span
+                                    style="font-family: arial, helvetica, sans-serif; font-size: 14px;">注：简历投递格式”姓名-应聘岗位-招聘信息来源“，美术类岗位请附上个人作品。</span>
+                            </p>
+                            <p><span
+                                    style="font-family: arial, helvetica, sans-serif; font-size: 14px;">附近车站：科韵路站3（200米）、科韵路总站（200米）、地铁科韵路站（580米）</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="inner-feedback-title">联系我们</div>
+                    <div class="inner-feedback j_feedback">
+                        <div>
+                            <div class="item-form">
+                                <span class="form-label"><span class="icon-require">*</span>留言标题：</span>
+                                <input class="form-input" name="title" type="text" autocomplete="off" placeholder=""
+                                    value="">
+                            </div>
+                            <div class="item-form">
+                                <span class="form-label"><span class="icon-require">*</span>联系邮箱：</span>
+                                <input class="form-input" name="email" type="text" autocomplete="off" placeholder=""
+                                    value="">
+                            </div>
+                            <div class="item-form">
+                                <span class="form-label">联系手机或电话：</span>
+                                <input class="form-input" name="phone_number" type="text" autocomplete="off"
+                                    placeholder="" value="">
+                            </div>
+                            <div class="item-form">
+                                <span class="form-label"><span class="icon-require">*</span>验证码：</span>
+                                <div class="item-form-bar">
+                                    <input class="form-input form-input-captcha" name="captcha" type="text"
+                                        autocomplete="off" placeholder="" value="">
+                                    <img class="pic-feed-captcha j_get_captcha"
+                                        src="data:image/jpeg;base64,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"
+                                        alt="验证码">
+                                    <span class="form-btn j_get_captcha">看不清，换一张</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-feedback-right">
+                            <div class="item-form">
+                                <span class="form-label"><span class="icon-require">*</span>留言内容：</span>
+                                <textarea class="form-input form-textarea" name="content"></textarea>
+                            </div>
+                            <div class="item-form-btn">
+                                <a class="submit-btn j_submit" href="javascript:;">提交</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="honor-wrap">
+                <div class="honor w12 wow fadeInUp" data-wow-duration="1s"
+                    style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                    <h3 class="title">企业荣誉</h3>
+
+                    <div class="swiper-container honor-swiper swiper-container-initialized swiper-container-horizontal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-active" style="width: 1200px;">
+                                <ul class="honor-list clearfix">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>广州市</p>
+                                            <p>“专精特新”民营企业扶优计划培育企业</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2021</p>
+                                            <p>广州文化企业30强</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2021年度游戏</p>
+                                            <p>十强优秀游戏研发团队</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>德勤中国</p>
+                                            <p>2020中国高科技高成长50强</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2020-2021年</p>
+                                            <p>金钻榜最具影响力企业</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next" style="width: 1200px;">
+                                <ul class="honor-list clearfix">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2020-2021年</p>
+                                            <p>金钻榜最具成长性企业</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2019-2021年</p>
+                                            <p>广州“未来独角兽”创新企业榜单</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2020年</p>
+                                            <p>年度热心公益奖</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻榜</p>
+                                            <p>2020最佳国产游戏</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金翊奖</p>
+                                            <p>2020玩家最喜爱的移动网络游戏</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide" style="width: 1200px;">
+                                <ul class="honor-list clearfix">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻榜</p>
+                                            <p>2020最受欢迎网络游戏</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻榜</p>
+                                            <p>2020最佳游戏制作团队</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>黑石奖</p>
+                                            <p>2020硬核年度最受欢迎卡牌游戏</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2019年</p>
+                                            <p>广州高科技高成长20强企业</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻榜</p>
+                                            <p>2019最佳国产游戏</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide" style="width: 1200px;">
+                                <ul class="honor-list clearfix">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻奖</p>
+                                            <p>2018年最具成长性企业</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2018年度</p>
+                                            <p>优秀游戏运营公司</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2018年度</p>
+                                            <p>最具匠心游戏</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>2017年</p>
+                                            <p>十大畅销游戏奖</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金鹏奖</p>
+                                            <p>2016年最佳IP改编网络游戏</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide" style="width: 1200px;">
+                                <ul class="honor-list clearfix">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻奖</p>
+                                            <p>2016最受欢迎游戏</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金鲸奖</p>
+                                            <p>2015最受期待手游</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻榜</p>
+                                            <p>2019最具创新力企业</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻榜</p>
+                                            <p>2019最具成长性企业</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>金钻榜</p>
+                                            <p>2019最佳游戏制作团队</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div
+                        class="swiper-pagination honor-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                            role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+                            tabindex="0" role="button" aria-label="Go to slide 2"></span><span
+                            class="swiper-pagination-bullet" tabindex="0" role="button"
+                            aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0"
+                            role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet"
+                            tabindex="0" role="button" aria-label="Go to slide 5"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- sidebar -->
+        <div class="sidebar" id="J_sidebar" style="display: none;">
+            <div class="sidebar-top">
+                <a href="javascript:;" class="on">公司简介</a>
+                <a href="javascript:;">企业文化</a>
+                <a href="javascript:;">诗悦大事件</a>
+                <a href="javascript:;">联系方式</a>
+                <a href="javascript:;">企业荣誉</a>
+                <span class="line"></span>
+            </div>
+            <div class="sidebar-bottom">
+                <p>扫一扫关注我们</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="sy-footer">
+        <div class="footer w12 clearfix">
+            <a href="/" class="logo">
+                <img src="assets/images/footer-logo.png" alt="诗悦网络">
+            </a>
+
+            <div class="content">
+                <div class="link">
+                    <a target="_blank" href="about.html">关于我们</a>
+                    <a target="_blank" href="join.html">加入我们</a>
+                    <a target="_blank" href="service.html">客服中心</a>
+                    <a href="about.html#contact" target="_blank">商务合作</a>
+                    <a href="article_detail_10_865.html " target="_blank">诗悦游戏未成年人成长守护计划</a>
+                </div>
+                <div class="about">
+                    <p>抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活</p>
+                    <p>
+                        <a href="article_detail_10_1399.html " title="《诗悦网络投诉指引》" target="_blank">《诗悦网络投诉指引》</a>
+                        <a href="article_detail_10_43.html " title="《交易纠纷处理内容》" target="_blank">《交易纠纷处理内容》</a>
+                        <a href="article_detail_10_37.html " title="《诗悦游戏隐私政策》" target="_blank">《诗悦游戏隐私政策》</a>
+                        <a href="article_detail_10_675.html " title="《诗悦游戏儿童隐私保护政策》" target="_blank">《诗悦游戏儿童隐私保护政策》</a>
+                        <a href="article_detail_10_34.html " title="《诗悦游戏用户服务协议》" target="_blank">《诗悦游戏用户服务协议》</a>
+                    </p>
+                    <p>
+                        <span>地址：广州市天河区科韵路36-38号 三楼</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>联系邮箱：SYlegal@shiyue.com</span>
+                        <span>客服邮箱：kefu@shiyue.com</span>
+                    </p>
+                    <p>
+                        <img src="assets/images/ghs.png">
+                        <a href="http://www.beian.gov.cn/apply/staticWebInfo?token=1a8e4306-1492-4f3a-9c0d-c7bca18484c0&amp;webSiteId=522073#minirecnum"
+                            target="_blank" rel="nofollow">粤公网安备 44010602005621号</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://beian.miit.gov.cn" target="_blank"
+                            rel="nofollow">粤ICP备15004121号</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+                    </p>
+                    <p id="copyright">广州诗悦网络科技有限公司 版权所有 Copyright © 2022 shiyue.com. All Rights Reserved.</p>
+                </div>
+            </div>
+
+            <div class="qrcode">
+                <img src="assets/images/footer-qr.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-1.11.3.min.js?v=1667375890"></script>
+    <script src="assets/js/jquery.toast.js?v=1667375890"></script>
+    <script src="assets/js/sha1.min.js?v=1667375890"></script>
+    <script src="assets/js/sign.js?v=1667375890"></script>
+    <script src="assets/js/storage.js?v=1667375890"></script>
+    <script src="assets/js/config.js?v=1667375890"></script>
+    <script src="assets/js/js.cookie.min.js?v=1667375890"></script>
+    <script src="assets/js/kfLoginCookies.js?v=1667375890"></script>
+    <script src="assets/js/common.js?v=1667375890"></script>
+
+    <script src="assets/js/swiper-4.5.0.min.js?v=1667375890"></script>
+    <script src="assets/js/about.js?v=1667375890"></script>
+    <script src="assets/js/wow.min.js?v=1667375890"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fdd099df1b914e1e5cfcd8f7d8202721";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</body>
+
+</html>
