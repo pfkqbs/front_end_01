@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 清除默认样式 */
+    * { padding: 0; margin: 0; }
+
+    /* 令html和body全屏显示, 并有一个灰色背景 */
+    html, body { height: 100%; background: gray; }
+
+    /* 先在父元素上设置相对定位 */
+    body { position: relative }
+
+    .center {
+      /* 绝对定位 */
+      position: absolute;
+
+      /* 上方和左方为50% */
+      top: 50%;
+      left: 50%;
+
+      /* 给定宽高 */
+      width: 300px;
+      height: 200px;
+
+      /* 上外边距为负的给定高度的一半 */
+      margin-top: -100px;
+
+      /* 左外边距为负的给定宽度的一半 */
+      margin-left: -150px;
+
+      /* 白色背景 */
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">设置居中的盒子宽度为 300px、高度为 200px：</div>
+  <pre>
+    top: 50%; 和 left: 50%; 会让盒子的左上角定位到中央位置；
+    所以给上外边距和左外边距一个负值将盒子拉到中央位置；
+    margin 的百分比并不是相对于自身，而是相对于父元素的宽度，所以这里不能写成 -50%；
+    此种实现方式兼容性也同样十分良好。
+  </pre>
+</body>
+</html>
